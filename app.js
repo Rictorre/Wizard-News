@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const postBank = require("./postBank");
 const app = express();
 
+
 const { PORT = 1337 } = process.env;
 
 app.listen(PORT, () => {
@@ -72,4 +73,3 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send("Sorry, page not found");
 });
-
